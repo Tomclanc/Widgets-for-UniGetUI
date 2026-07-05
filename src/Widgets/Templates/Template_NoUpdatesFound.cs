@@ -25,7 +25,7 @@ namespace WidgetsForUniGetUI.Templates
                         "items": [
                             {
                                 "type": "TextBlock",
-                                "text": "Hooray! No updates were found!",
+                                "text": "太好了！未发现可用更新",
                                 "wrap": true,
                                 "horizontalAlignment": "Center",
                                 "fontType": "Default",
@@ -41,7 +41,7 @@ namespace WidgetsForUniGetUI.Templates
                             },
                             {
                                 "type": "TextBlock",
-                                "text": "Everything seems to be up-to-date",
+                                "text": "所有软件包看起来都是最新版本",
                                 "wrap": true,
                                 "horizontalAlignment": "Center",
                                 "size": "Small",
@@ -63,7 +63,7 @@ namespace WidgetsForUniGetUI.Templates
                                         "actions": [
                                             {
                                                 "type": "Action.Execute",
-                                                "title": "Check again",
+                                                "title": "重新检查",
                                                 "verb": "{{Verbs.Reload}}"
                                             }
                                         ]
@@ -94,7 +94,7 @@ namespace WidgetsForUniGetUI.Templates
                                         "actions": [
                                             {
                                                 "type": "Action.Execute",
-                                                "title": "Show UniGetUI",
+                                                "title": "打开 UniGetUI",
                                                 "verb": "{{Verbs.OpenUniGetUI}}"
                                             }
                                         ]

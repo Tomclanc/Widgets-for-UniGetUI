@@ -25,7 +25,7 @@ namespace WidgetsForUniGetUI.Templates
                         "items": [
                             {
                                 "type": "TextBlock",
-                                "text": "Checking for updates...",
+                                "text": "正在检查更新...",
                                 "wrap": true,
                                 "fontType": "Default",
                                 "size": "Default",
@@ -41,7 +41,7 @@ namespace WidgetsForUniGetUI.Templates
                             },
                             {
                                 "type": "TextBlock",
-                                "text": "This won't take long",
+                                "text": "这不会花太久",
                                 "wrap": true,
                                 "size": "Small",
                                 "horizontalAlignment": "Center"

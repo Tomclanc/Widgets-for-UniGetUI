@@ -26,7 +26,7 @@ namespace WidgetsForUniGetUI.Templates
                         "items": [
                             {
                                 "type": "TextBlock",
-                                "text": "Could not communicate with UniGetUI",
+                                "text": "无法与 UniGetUI 通信",
                                 "wrap": true,
                                 "horizontalAlignment": "Center",
                                 "fontType": "Default",
@@ -42,7 +42,7 @@ namespace WidgetsForUniGetUI.Templates
                             },
                             {
                                 "type": "TextBlock",
-                                "text": "UniGetUI is required for this widget to work.\nPlease make sure that UniGetUI is installed and running on the background",
+                                "text": "此小组件需要 UniGetUI 才能工作。\n请确认 UniGetUI 已安装并正在后台运行",
                                 "wrap": true,
                                 "horizontalAlignment": "Center",
                                 "size": "Small"
@@ -76,7 +76,7 @@ namespace WidgetsForUniGetUI.Templates
                                         "actions": [
                                             {
                                                 "type": "Action.Execute",
-                                                "title": "Retry",
+                                                "title": "重试",
                                                 "verb": "{{Verbs.Reload}}"
                                             }
                                         ]

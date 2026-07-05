@@ -24,7 +24,7 @@
                         "items": [
                             {
                                 "type": "TextBlock",
-                                "text": "Your packages are being updated!",
+                                "text": "正在更新软件包！",
                                 "wrap": true,
                                 "horizontalAlignment": "Center",
                                 "fontType": "Default",
@@ -40,7 +40,7 @@
                             },
                             {
                                 "type": "TextBlock",
-                                "text": "The updates will be ready soon. You can check their progress on UniGetUI",
+                                "text": "更新很快就会完成。你可以在 UniGetUI 中查看进度",
                                 "wrap": true,
                                 "horizontalAlignment": "Center",
                                 "size": "Small"
@@ -73,7 +73,7 @@
                                         "actions": [
                                             {
                                                 "type": "Action.Execute",
-                                                "title": "Refresh",
+                                                "title": "刷新",
                                                 "verb": "{{Verbs.Reload}}"
                                             }
                                         ]

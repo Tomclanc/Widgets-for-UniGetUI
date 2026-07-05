@@ -54,7 +54,7 @@ namespace WidgetsForUniGetUI.Templates
                 "items": [
                     {
                         "type": "TextBlock",
-                        "text": "Available Updates: ${count}",
+                        "text": "可用更新：${count}",
                         "wrap": true,
                         "weight": "Bolder",
                         "size": "Default",
@@ -194,7 +194,7 @@ namespace WidgetsForUniGetUI.Templates
                                     "actions": [
                                         {
                                             "type": "Action.Execute",
-                                            "title": "Update all",
+                                            "title": "全部更新",
                                             "verb": "{{Verbs.UpdateAll}}"
                                         }
                                     ]
@@ -280,12 +280,12 @@ namespace WidgetsForUniGetUI.Templates
             int extraPackages = _totalPackages - _packages.Count;
             if (extraPackages >= 1)
                 return data += "," + $$"""
-                    "upgradablePackages": "{{_widget.PackageOffset + 1}} - {{_widget.PackageOffset + maxPackages}} out of {{_totalPackages}}"
+                    "upgradablePackages": "{{_widget.PackageOffset + 1}} - {{_widget.PackageOffset + maxPackages}} / {{_totalPackages}}"
                 }
                 """;
             else
                 return data += "," + $$"""
-                    "upgradablePackages": "{{1}} - {{_totalPackages}} out of {{_totalPackages}}"
+                    "upgradablePackages": "{{1}} - {{_totalPackages}} / {{_totalPackages}}"
                 }
                 """;
         }
@@ -329,7 +329,7 @@ namespace WidgetsForUniGetUI.Templates
                                     },
                                     {
                                         "type": "TextBlock",
-                                        "text": "From ${Version{{index}}} to ${NewVersion{{index}}}",
+                                        "text": "${Version{{index}}} -> ${NewVersion{{index}}}",
                                         "fontType": "Default",
                                         "size": "Small",
                                         "weight": "Lighter",
@@ -356,7 +356,7 @@ namespace WidgetsForUniGetUI.Templates
                                         "title": "🠟",
                                         "verb": "{{Verbs.UpdatePackage}}_{{_widget.PackageOffset + index}}",
                                         "data": {},
-                                        "tooltip": "Update this package",
+                                        "tooltip": "更新此软件包",
                                         "spacing": "None"
                                     }
                                 ],

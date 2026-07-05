@@ -32,7 +32,7 @@ namespace WidgetsForUniGetUI.Templates
                         "items": [
                             {
                                 "type": "TextBlock",
-                                "text": "Something went wrong...",
+                                "text": "出了点问题...",
                                 "wrap": true,
                                 "horizontalAlignment": "Center",
                                 "fontType": "Default",
@@ -48,7 +48,7 @@ namespace WidgetsForUniGetUI.Templates
                             },
                             {
                                 "type": "TextBlock",
-                                "text": "An error occurred with this widget: ${errorcode}",
+                                "text": "此小组件发生错误：${errorcode}",
                                 "wrap": true,
                                 "horizontalAlignment": "Center",
                                 "size": "Small",
@@ -83,7 +83,7 @@ namespace WidgetsForUniGetUI.Templates
                                         "actions": [
                                             {
                                                 "type": "Action.Execute",
-                                                "title": "Try again",
+                                                "title": "重试",
                                                 "verb": "{{Verbs.Reload}}"
                                             }
                                         ]

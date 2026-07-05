@@ -15,7 +15,8 @@
     <ApplicationIcon>icon.ico</ApplicationIcon>
 	<PublishTrimmed>true</PublishTrimmed>
 	<BuiltInComInteropSupport>true</BuiltInComInteropSupport>
-	<AssemblyName>Widgets-for-UniGetUI</AssemblyName>
+	<RootNamespace>WidgetsForUniGetUI</RootNamespace>
+	<AssemblyName>Widgets_for_UniGetUI</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
