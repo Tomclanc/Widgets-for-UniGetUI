@@ -416,8 +416,9 @@ namespace WidgetsForUniGetUI
                     return endpoint;
                 })
                 .Where(endpoint => endpoint.Token != "" && endpoint.NamedPipeName != "")
-                .OrderByDescending(endpoint => runningPids.Contains(endpoint.ProcessId))
-                .ThenByDescending(endpoint => endpoint.SessionKind.Equals("headless", StringComparison.OrdinalIgnoreCase))
+                .OrderByDescending(endpoint => CanConnectTcp(endpoint.TcpPort))
+                .ThenByDescending(endpoint => endpoint.IsTcpTransport)
+                .ThenByDescending(endpoint => runningPids.Contains(endpoint.ProcessId))
                 .ThenByDescending(endpoint => endpoint.LastWriteTimeUtc)
                 .ToArray();
 
@@ -426,6 +427,13 @@ namespace WidgetsForUniGetUI
                 throw new FileNotFoundException("No valid UniGetUI IPC endpoint was found");
             }
 
+            Logger.Log(
+                "Selected UniGetUI endpoint: "
+                + $"pid={endpoints[0].ProcessId}, "
+                + $"transport={endpoints[0].Transport}, "
+                + $"transportName={endpoints[0].TransportName}, "
+                + $"tcpPort={endpoints[0].TcpPort}, "
+                + $"sessionKind={endpoints[0].SessionKind}");
             return endpoints[0];
         }
 
@@ -553,6 +561,7 @@ namespace WidgetsForUniGetUI
         public int TcpPort { get; set; } = 7058;
         public string NamedPipeName { get; set; } = "UniGetUI.IPC";
         public DateTime LastWriteTimeUtc { get; set; }
+        public bool IsTcpTransport => Transport == 0 || TransportName.Equals("tcp", StringComparison.OrdinalIgnoreCase);
     }
 
     public class UniGetUIStatus
